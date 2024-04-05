@@ -342,6 +342,37 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );}
         .form__field:invalid {
             box-shadow: none;
         }
+         @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
+
+
+.black-lives-matter {
+
+  font-size: 6vw;
+  line-height: 8vw;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+  background: url(https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/rockcms/2022-10/bananas-mc-221004-bf055f.jpg);
+  background-size: 50%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 10s ease 500ms forwards;
+}
+h1{
+    margin-top: 100px;
+}
+.head{
+    margin-top: 50px;
+}
+@keyframes zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
     </style>
 </head>
 
@@ -358,7 +389,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );}
     </header>
     <div class="nav-bg"></div>
     
-    <h1 class="animated-heading">Banana Quality Prediction</h1>
+   <div class="head">
+    <h1 class="black-lives-matter">#Banana Quality Prediction</h1> 
+</div>
     
     <form id="bananaForm">
         <div class="form__group field">
