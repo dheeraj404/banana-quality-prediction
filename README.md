@@ -1,35 +1,60 @@
-%-----------PROJECTS-----------%
-\section{Projects}
-\resumeSubHeadingListStart
+# Banana Quality Prediction Model
 
-\resumeProjectHeading
-{\textbf{Banana Quality Prediction Model} $|$ \emph{Python, Pandas, Scikit-learn, Flask}}{}
-\resumeItemListStart
-    \resumeItem{Developed a \textbf{machine learning model} to predict the quality of bananas based on features like size, weight, sweetness, and ripeness.}
-    \resumeItem{Utilized various classification algorithms including \textbf{Random Forest}, \textbf{KNN}, and \textbf{MLP} to evaluate model performance.}
-    \resumeItem{Preprocessed data using \textbf{Pandas} and \textbf{StandardScaler} to ensure accurate and reliable predictions.}
-    \resumeItem{Deployed the model using \textbf{Flask} to create an API that accepts input data and returns predictions for banana quality.}
-    \resumeItem{GitHub: \url{https://github.com/dheeraj404/banana-quality-prediction}}
-\resumeItemListEnd
+## Overview
 
-\resumeProjectHeading
-{\textbf{Test Secure} $|$ \emph{Node.js, React, MongoDB}}    
+The **Banana Quality Prediction Model** is a machine learning application that predicts the quality of bananas based on various features, such as size, weight, sweetness, and ripeness. This project demonstrates how to apply machine learning algorithms to real-world datasets and create a simple web-based API for predictions.
 
-\resumeItemListStart
-    \resumeItem{Developed a secure examination paper distribution system ensuring \textbf{100\% integrity} and \textbf{confidentiality}.}
-    \resumeItem{Implemented \textbf{role-based authentication} for \textbf{administrators}, \textbf{examiners}, and \textbf{invigilators}.}
-    \resumeItem{Utilized \textbf{AES-256 CTR encryption} for secure paper management and version control.}
-    \resumeItem{Built a \textbf{MongoDB} database for \textbf{efficient data storage} and retrieval.}
-    \resumeItem{GitHub: \url{https://github.com/techlism/odoo_hackathon}}
-\resumeItemListEnd
+## Technologies Used
 
-\resumeProjectHeading
-{\textbf{Khosla Electronics Website (Internship Project)} $|$ \emph{React.js, Node.js, Custom CSS}}{}
-\resumeItemListStart
-    \resumeItem{Led \textbf{front-end development} of a \textbf{live e-commerce platform}, enhancing \textbf{user engagement} for hundreds of daily users.}
-    \resumeItem{Collaborated on \textbf{API integration} for \textbf{real-time product updates} and \textbf{dynamic content}.}
-    \resumeItem{Maintained the site based on \textbf{user feedback}, ensuring \textbf{reliability} and \textbf{usability}.}
-    \resumeItem{GitHub: \url{https://github.com/dheeraj404/khosla-web-app}}
-\resumeItemListEnd
+- **Python**: Programming language for implementing the machine learning model.
+- **Pandas**: Data manipulation and analysis library used for data preprocessing.
+- **Scikit-learn**: Machine learning library for building classification models.
+- **Flask**: Web framework used to deploy the machine learning model as an API.
+- **Jupyter Notebook**: Used for data exploration and model training.
 
-\resumeSubHeadingListEnd
+## Features
+
+- **Multiple Classification Algorithms**: Implements various models including Random Forest, KNN, and MLP to predict banana quality.
+- **Data Preprocessing**: Utilizes Pandas for cleaning and preparing the dataset for modeling.
+- **Model Deployment**: The trained model is deployed using Flask, allowing users to submit input and receive predictions via a simple API.
+
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/dheeraj404/banana-quality-prediction.git
+    ```
+
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. To train and test the model:
+    - Run the `model_training.py` script, which trains the machine learning model using the dataset.
+
+2. To use the deployed API:
+    - Start the Flask server by running:
+      ```bash
+      python app.py
+      ```
+
+3. Send a POST request to the API with the following data format:
+    ```json
+    {
+      "size": 250,
+      "weight": 150,
+      "sweetness": 7,
+      "ripeness": 5
+    }
+    ```
+
+4. The response will be the predicted quality of the banana.
+
+## Example Request
+```bash
+curl -X POST http://127.0.0.1:5000/predict \
+    -H "Content-Type: application/json" \
+    -d '{"size": 250, "weight": 150, "sweetness": 7, "ripeness": 5}'
